@@ -8,6 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HelloJspController {
 
+    // render 배포용 
+    @GetMapping("/")
+    public String index() {
+        return "redirect:/hello-jsp";
+    }
+
     // 💡 @GetMapping: HTTP GET 요청을 특정 URL 경로와 매핑합니다.
     // 클라이언트가 "/hello-jsp" 경로로 GET 요청을 보내면 이 메소드가 호출됩니다.
     @GetMapping("/hello-jsp")
